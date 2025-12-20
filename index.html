@@ -1,63 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Student AI Toolkit</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <style>
-    body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; }
-    h1, h2 { margin-bottom: 5px; }
-    .product { border: 1px solid #ddd; padding: 15px; margin: 15px 0; border-radius: 8px; }
-    .btn { display: inline-block; padding: 10px 16px; text-decoration: none; border-radius: 6px; }
-    .btn-primary { background: black; color: white; }
-    .badge { font-size: 12px; padding: 3px 6px; border-radius: 4px; background: #eee; }
+    :root {
+      --bg-main: #f4f6fb;
+      --card-bg: #ffffff;
+      --primary: #4f46e5;
+      --primary-soft: #eef2ff;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --border-soft: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--primary-soft);
+      color: var(--primary);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .product {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 22px 20px 26px;
+      border: 1px solid var(--border-soft);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product h2 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .product p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .product ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 18px;
+    }
+
+    .product ul li {
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+
+    .price {
+      font-weight: 600;
+      margin-top: auto;
+      margin-bottom: 14px;
+      font-size: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      text-align: center;
+      background: var(--primary);
+      color: #ffffff;
+      text-decoration: none;
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+      box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 26px rgba(79, 70, 229, 0.35);
+    }
+
+    .info {
+      background: #ffffff;
+      border: 1px solid var(--border-soft);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 30px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    footer strong {
+      color: var(--text-main);
+    }
   </style>
 </head>
+
 <body>
-  <h1>Student AI Toolkit</h1>
-  <p>Digital tools for Indian college students to <strong>study smarter</strong> and <strong>start earning</strong>.</p>
-  <p><span class="badge">100% digital · No refunds on downloaded files</span></p>
+  <div class="page">
 
-  <div class="product">
-    <h2>AI Study Planner (Exams)</h2>
-    <p>Plan your entire exam month with AI-powered prompts, daily schedule, and revision tracker.</p>
-    <ul>
-      <li>Daily + weekly planner templates</li>
-      <li>Ready-made AI prompts to generate notes & questions</li>
-      <li>Designed for Indian college syllabus</li>
-    </ul>
-    <p><strong>Price: ₹199</strong></p>
-    <a class="btn btn-primary" href="upi://pay?pa=syedmanal2021@oksbi&pn=StudentAIToolkit&am=199&cu=INR" target="_blank">Buy Now</a>
+    <header>
+      <span class="badge">Simple • Calm • Useful</span>
+      <h1>Student AI Toolkit</h1>
+      <p>
+        Digital tools designed to help students think clearly, study smarter,
+        and reduce mental overload using structured AI support.
+      </p>
+    </header>
+
+    <section class="products">
+
+      <div class="product">
+        <h2>AI Study Planner</h2>
+        <p>Plan your exams, daily study flow, and revision using structured templates and AI prompts.</p>
+        <ul>
+          <li>✔ Daily & weekly planners</li>
+          <li>✔ Exam overview & revision system</li>
+          <li>✔ Ready-to-use AI study prompts</li>
+        </ul>
+        <div class="price">₹199 (One-time)</div>
+        <a class="btn"
+           href="upi://pay?pa=syedmanal@oksbi&pn=StudentAIToolkit&am=199&cu=INR"
+           target="_blank">Buy Now</a>
+      </div>
+
+      <div class="product">
+        <h2>Resume & LinkedIn Kit</h2>
+        <p>Create a clean resume and LinkedIn profile even with limited experience.</p>
+        <ul>
+          <li>✔ Editable resume template</li>
+          <li>✔ LinkedIn headline & about section</li>
+          <li>✔ Outreach message examples</li>
+        </ul>
+        <div class="price">₹249 (One-time)</div>
+        <a class="btn"
+           href="upi://pay?pa=syedmanal@oksbi&pn=StudentAIToolkit&am=249&cu=INR"
+           target="_blank">Buy Now</a>
+      </div>
+
+      <div class="product">
+        <h2>AI Prompt Pack</h2>
+        <p>Carefully written prompts to help with studying, clarity, and basic productivity.</p>
+        <ul>
+          <li>✔ Study & revision prompts</li>
+          <li>✔ Thinking & clarity prompts</li>
+          <li>✔ Easy to copy and use</li>
+        </ul>
+        <div class="price">₹299 (One-time)</div>
+        <a class="btn"
+           href="upi://pay?pa=syedmanal@oksbi&pn=StudentAIToolkit&am=299&cu=INR"
+           target="_blank">Buy Now</a>
+      </div>
+
+    </section>
+
+    <div class="info">
+      After payment, send a screenshot to our email or WhatsApp.
+      You will receive your files within 24 hours.
+    </div>
+
+    <footer>
+      Contact: <strong>syedmanal2021@gmail.com</strong>
+    </footer>
+
   </div>
-
-  <div class="product">
-    <h2>Resume + LinkedIn Kit (No Experience)</h2>
-    <p>Done-for-you templates to get internships and freelance gigs even if you think you have “nothing” to show.</p>
-    <ul>
-      <li>Fill-in-the-blanks resume template</li>
-      <li>LinkedIn About + headline scripts</li>
-      <li>Cold DM and email templates</li>
-    </ul>
-    <p><strong>Price: ₹249</strong></p>
-    <a class="btn btn-primary" href="upi://pay?pa=syedmanal2021@oksbi&pn=StudentAIToolkit&am=249&cu=INR" target="_blank">Buy Now</a>
-  </div>
-
-  <div class="product">
-    <h2>AI Prompt Pack (Study + Side Income)</h2>
-    <p>50+ ready prompts to use with ChatGPT or any AI to help with notes, projects, content & client work.</p>
-    <ul>
-      <li>Exam revision prompts</li>
-      <li>Freelancing & portfolio prompts</li>
-      <li>Content & social media prompts</li>
-    </ul>
-    <p><strong>Price: ₹299</strong></p>
-    <a class="btn btn-primary" href="upi://pay?pa=syedmanal2021@oksbi&pn=StudentAIToolkit&am=299&cu=INR" target="_blank">Buy Now</a>
-  </div>
-
-  <hr>
-  <p>After payment, you will receive the files by email or Telegram within 24 hours.</p>
-  <p>Contact: <strong>syedmanal2021@gmail.com</strong>
-<p><strong>After payment, send a screenshot to our email or Telegram. You will receive your files within 24 hours.</strong></p> 
-  
 </body>
 </html>
